@@ -1,5 +1,6 @@
 $(document).ready(function(){
-
+    var source = $("#hb-template").html();
+      var template = Handlebars.compile(source);
 
 
 // chiamata ajax da database
@@ -8,13 +9,12 @@ $(document).ready(function(){
     method: "GET",
     success: function(dischi) {
         //console.log(dischi)
-        var dischi = dischi.respsponse;
         for (var i = 0; i < dischi.length; i++) {
             var oggetto = dischi[i];
-            var titolo = dischi.title;
-            var autore = dischi.author;
-            var anno   = dischi.year;
-            var immagine = dischi.poster;
+            var titolo = oggetto.title;
+            var autore = oggetto.author;
+            var anno   = oggetto.year;
+            var immagine = oggetto.poster;
 // preparo contesto per handlebar
             var context = {
         'poster' : immagine,
@@ -22,8 +22,7 @@ $(document).ready(function(){
         'name'     : autore,
         'anno' : anno,
     };
-        var source = $("#hb-template").html();
-          var template = Handlebars.compile(source);
+
 
           var html = template(context);
           $(".cds-container").append(html)
