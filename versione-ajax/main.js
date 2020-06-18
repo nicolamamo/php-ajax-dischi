@@ -7,10 +7,10 @@ $(document).ready(function(){
     url: "database/dischi.php",
     method: "GET",
     success: function(dischi) {
-        var dischi = data.response
-        // recupero dischi restituiti dall api (array)
-        console.log(dischi);
-        alert('bravo!');
+        var dischi = dischi.response
+        console.log(dischi)
+
+
 
     },
     error: function() {
@@ -18,3 +18,4 @@ $(document).ready(function(){
     }
   });
 });
+// recupero dischi restituiti dall api (array)
