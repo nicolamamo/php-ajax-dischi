@@ -1,9 +1,6 @@
 <?php include 'database/dischi.php' ?>
 
 
-
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -20,12 +17,12 @@
             <div class="cd">
                 <img src="<?php echo $disco['poster'] ?>" alt="">
                 <h3><?php echo $disco['title'] ?></h3>
-                <p><?php echo $dico['author'] ?></p>
-                <p><?php echo $dico['genre'] ?></p>
-                <p><?php echo $dico['year'] ?></p>
+                <p><?php echo $disco['author'] ?></p>
+                <p><?php echo $disco['genre'] ?></p>
+                <p><?php echo $disco['year'] ?></p>
             </div>
-        }
-
+        <?php } ?>
+        </div>
     </div>
     </body>
 </html>
