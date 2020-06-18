@@ -72,7 +72,7 @@ $dischi = [
         'year' => '1987'
     ]
 ];
-​
+​echo json_encode($dischi);
 //var_dump($dischi);
 ​
 ?>
