@@ -1,6 +1,5 @@
 <?php include 'database/dischi.php' ?>
 
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
